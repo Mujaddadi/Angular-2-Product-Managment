@@ -1,9 +1,18 @@
+
+// Import Angular core so we can use @component
+
 import { Component } from '@angular/core';
 
+// Metadata
 @Component({
     selector: 'pm-app',
-    template: `
-        <h1>Angular2: Getting Started</h1>
-    `
+    template: `<div><h1>{{pageTitle}}</h1>
+                    <pm-products></pm-products>
+                  </div>`
 })
-export class AppComponent { }
+
+//Class of component
+export class AppComponent {
+    pageTitle : string = `Product Managment`
+
+}

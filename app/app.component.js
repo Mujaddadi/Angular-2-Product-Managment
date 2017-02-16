@@ -1,3 +1,4 @@
+// Import Angular core so we can use @component
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -6,15 +7,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
+// Metadata
 var AppComponent = (function () {
     function AppComponent() {
+        this.pageTitle = "Product Managment";
     }
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
         selector: 'pm-app',
-        template: "\n        <h1>Angular2: Getting Started</h1>\n    "
+        template: "<div><h1>{{pageTitle}}</h1>\n                    <pm-products></pm-products>\n                  </div>"
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
