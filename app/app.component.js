@@ -7,6 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
+var product_service_1 = require("./products/product.service");
 // Metadata
 var AppComponent = (function () {
     function AppComponent() {
@@ -17,7 +18,8 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'pm-app',
-        template: "<div><h1>{{pageTitle}}</h1>\n                    <pm-products></pm-products>\n                  </div>"
+        template: "\n<div>\n    <nav class=\"navbar navbar-default\">\n        <div class=\"conatiner-fluid\">\n            <a href=\"\" class=\"navbar-brand\">{{pageTitle}}</a>\n            <ul class=\"nav navbar-nav\">\n                <li><a [routerLink]= \"['/welcome']\"> Home</a></li>\n                <li><a [routerLink]= \"['/products']\">Product List</a></li>\n            </ul>\n        </div>\n    </nav>\n    <div class='conatiner'>\n        <router-outlet> </router-outlet>\n    </div>\n</div>\n\n",
+        providers: [product_service_1.ProductService]
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
