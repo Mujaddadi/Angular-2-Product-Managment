@@ -16,14 +16,14 @@ var ProductListComponent = (function () {
         this.pageTitle = 'Product List';
         this.imageWidth = 50;
         this.imageMargin = 2;
-        this.showImage = false;
+        this.showImage = true;
     }
     ProductListComponent.prototype.toggleImage = function () {
         this.showImage = !this.showImage;
     };
     ProductListComponent.prototype.ngOnInit = function () {
         var _this = this;
-        console.log("Starting");
+        console.log('Starting');
         this._productService.getProducts()
             .subscribe(function (products) { return _this.products = products; }, function (error) { return _this.errorMessage = error; });
     };
